@@ -36,15 +36,15 @@ function yelpInfo() {
 
         for (var i = 0; i < results.length; i++) {
 
-            var newRest = $("<div>");
+            var newRest = $("<div id='restaurant'>");
 
             var restImage = $("<img>");
             restImage.attr("src", results[i].image_url);
 
-            var restName = $("<p>").text(results[i].name);
-            var restRating = $("<p>").text(results[i].rating);
-            var restPrice = $("<p>").text(results[i].price);
-            var restAddress = $("<p>").text(results[i].location.display_address[0] + " " + results[i].location.display_address[1]);
+            var restName = $("<tr>").text(results[i].name);
+            var restRating = $("<tr>").text(results[i].rating);
+            var restPrice = $("<tr>").text(results[i].price);
+            var restAddress = $("<tr>").text(results[i].location.address1 + ", " + results[i].location.city);
 
             newRest.append(restImage);
             newRest.append(restName, restRating, restPrice, restAddress);
@@ -53,3 +53,24 @@ function yelpInfo() {
         }
     });
 };
+
+// -------------------------------ANDREW'S WORK AREA------------------------------------------------------//
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------------------//
+
+
+
+// -----------------------------------JERRY'S WORK AREA----------------------------------------------------//
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------------------------------------------//

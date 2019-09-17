@@ -57,3 +57,16 @@ p {
        -moz-border-radius: 8px;
             border-radius: 8px;
 }
+
+img {
+    width: 200px;
+    height: 200px;
+ }
+ #yelp-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+ #restaurant {
+    padding: 10px 10px;
+ }

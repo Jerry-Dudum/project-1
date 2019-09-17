@@ -3,6 +3,10 @@
     
 }
 
+body {
+    background-image: "assets/Background.jpeg";
+}
+
 h1 {
     width: 450px;
     margin-left: 3%;
@@ -70,3 +74,7 @@ img {
  #restaurant {
     padding: 10px 10px;
  }
+
+ iframe {
+     padding-top: 20px;
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Get In My Belly</title>
+</head>
+
+<body>
+    <div class="main">
+        <!-- <div class="row"> -->
+        <nav class="navbar navbar-light bg-light">
+            <h1>Get in my Belly</h1>
+        </nav>
+
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+        <div class="container text-center">
+            <!-- <h3 class="text-center">eat this</h3> -->
+            <p class="text-center">
+                Don't know what to eat?
+                Don't worry we'll decide for you!
+            </p>
+        </div>
+        <!-- </div> -->
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <button id="random" type="button" class="btn btn-primary btn-lg  ">Random</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <button id="vegan" type="button" class="btn btn-primary btn-sm">Vegan</button>
+                <button id="vegetarian" type="button" class="btn btn-secondary btn-sm">Vegetarian</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                    data-whatever="@mdo">Form</button>
+
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="food" class="col-form-label">Food:</label>
+                                        <input type="text" class="form-control" id="food-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="price" class="col-form-label">Price:</label>
+                                        <textarea class="form-control" id="price-input"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rating" class="col-form-label">Rating:</label>
+                                        <textarea class="form-control" id="rating-input"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <button type="button" id="submit-button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="yelp-info">
+            
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
+</body>
+
+</html>

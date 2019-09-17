@@ -3,8 +3,13 @@
     
 }
 
+.navbar {
+    width: 1300px;
+}
+
 body {
-    background-image: "assets/Background.jpeg";
+    background-image: url('../assets/Background.jpeg'); 
+    width: 1300px; 
 }
 
 h1 {
@@ -15,7 +20,8 @@ h1 {
 
 p {
     margin-top: 10%;
-    font-size: 150%;
+    font-size: 170%;
+    color: red;
 }
 
 #random {

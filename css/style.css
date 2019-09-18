@@ -37,12 +37,12 @@ p {
 #random {
     background-color: red;
     margin-top: 3%;
-    padding: 18px 0px;
+    padding: 18px 18px;
     font-size: 52px; 
     line-height: normal;
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
-            border-radius: 8px;
+            border-radius: 30px;
 }
 
 #random:hover {
@@ -52,12 +52,12 @@ p {
 #vegetarian {
     background-color: darkgreen;
     margin-top: 3%;
-    padding: 18px 0px;
+    padding: 18px 18px;
     font-size: 32px; 
     line-height: normal;
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
-            border-radius: 8px;
+            border-radius: 30px;
 }
 
 #vegetarian:hover {
@@ -68,16 +68,20 @@ p {
 #modal {
     background-color: darkgreen;
     margin-top: 3%;
-    padding: 18px 0px;
+    padding: 18px 18px;
     font-size: 32px; 
     line-height: normal;
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
-            border-radius: 8px;
+            border-radius: 30px;
 }
 
 #modal:hover {
     background-color: lightgreen;
+}
+
+.modal-content {
+    width: 200px;
 }
 
 img {

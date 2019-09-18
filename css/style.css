@@ -6,18 +6,14 @@
 .navbar {
     /* width: 100%; */
     padding: 0 !important;
+
+
 }
 
-/* body {
-    background-image: url('../assets/Background.jpeg');
-    width: 100%;
-    /* height: 360px; */
-    /* background-repeat: repeat
-} */ 
 .body-container {
     background-image: url('../assets/Background.jpeg');
     width: 100%;
-    height: 700px;
+    height: 650px;
     background-repeat: repeat
 } 
 
@@ -28,7 +24,7 @@ h1 {
 }
 
 p {
-    margin-top: 10%;
+    margin-top: 2%;
     font-size: 48px;
     color: red;
     text-shadow:
@@ -49,6 +45,10 @@ p {
             border-radius: 8px;
 }
 
+#random:hover {
+    background-color: yellow;
+}
+
 #vegetarian {
     background-color: darkgreen;
     margin-top: 3%;
@@ -60,6 +60,11 @@ p {
             border-radius: 8px;
 }
 
+#vegetarian:hover {
+    background-color: lightgreen;
+}
+
+
 #modal {
     background-color: darkgreen;
     margin-top: 3%;
@@ -69,6 +74,10 @@ p {
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
             border-radius: 8px;
+}
+
+#modal:hover {
+    background-color: lightgreen;
 }
 
 img {
@@ -93,3 +102,6 @@ img {
 .nopadding {
     padding: 0 !important;
 }
+
+
+

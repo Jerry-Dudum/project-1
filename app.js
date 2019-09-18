@@ -33,11 +33,25 @@ function yelpInfo() {
         var results = response.businesses;
 
         console.log(results);
+        for (var i = 0; i < results.length; i++) {
+            var restPos = {
+                lat: results[i].coordinates.latitude,
+                lng: results[i].coordinates.longitude
+            };
+            var marker = new google.maps.Marker({
+                position: restPos,
+                map: map,
+                title: results[i].name,
+                animation: google.maps.Animation.DROP,
+                icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+            });
+            marker.setMap(map);
+        }
 
         for (var i = 0; i < results.length; i++) {
 
             var newRest = $("<div id='restaurant'>");
-
+            
             var restImage = $("<img>");
             restImage.attr("src", results[i].image_url);
 
@@ -50,7 +64,7 @@ function yelpInfo() {
             newRest.append(restName, restRating, restPrice, restAddress);
 
             $("#yelp-info").append(newRest);
-            console.log(currentLocation.lat, currentLocation.lng);
+            
         }
     });
 };
@@ -94,6 +108,21 @@ function yelpInfo2() {
         var results = response.businesses;
 
         console.log(results);
+
+        for (var i = 0; i < results.length; i++) {
+            var restPos = {
+                lat: results[i].coordinates.latitude,
+                lng: results[i].coordinates.longitude
+            };
+            var marker = new google.maps.Marker({
+                position: restPos,
+                map: map,
+                title: results[i].name,
+                animation: google.maps.Animation.DROP,
+                icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+            });
+            marker.setMap(map);
+        }
 
         for (var i = 0; i < results.length; i++) {
 
@@ -165,6 +194,21 @@ function yelpInfo3() {
         console.log(results);
 
         for (var i = 0; i < results.length; i++) {
+            var restPos = {
+                lat: results[i].coordinates.latitude,
+                lng: results[i].coordinates.longitude
+            };
+            var marker = new google.maps.Marker({
+                position: restPos,
+                map: map,
+                title: results[i].name,
+                animation: google.maps.Animation.DROP,
+                icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+            });
+            marker.setMap(map);
+        }
+
+        for (var i = 0; i < results.length; i++) {
 
             var newRest = $("<div id='restaurant'>");
 
@@ -206,6 +250,7 @@ function initMap() {
             var marker = new google.maps.Marker({
                 position: currentLocation,
                 map: map,
+                title: "YOU ARE HERE!!!",
                 animation: google.maps.Animation.DROP,
                 icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
             })
@@ -214,6 +259,9 @@ function initMap() {
         })
     }
 }
+
+
+
 
 
 //-----------------------------------------------------------------------------------------------------------//

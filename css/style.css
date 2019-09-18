@@ -1,11 +1,8 @@
 .material-icons {
     padding-right: 10%;
-    
 }
 
 .navbar {
-    /* width: 100%; */
-    font-family: "helvetica neue", Arial, Helvetica, sans-serif;
     padding: 0 !important;
     background-color: #ffc300;
 }
@@ -18,9 +15,11 @@
 } 
 
 h1 {
-    width: 550px;
+    width: 100%;
     margin-left: 3%;
-    font-size: 350%;
+    font-size: 360%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
 p {
@@ -28,10 +27,10 @@ p {
     font-size: 48px;
     color: red;
     text-shadow:
-       -1px -1px 0 white,
-        1px -1px 0 white,
-        -1px 1px 0 white,
-        1px 1px 0 white;
+       -2px -2px 0 white,
+        2px -2px 0 white,
+        -2px 2px 0 white,
+        2px 2px 0 white;
 }
 
 #random {
@@ -63,7 +62,6 @@ p {
 #vegetarian:hover {
     background-color: lightgreen;
 }
-
 
 #modal {
     background-color: darkgreen;
@@ -108,5 +106,9 @@ img {
     padding: 0 !important;
 }
 
+.logo {
+    height: 60px;
+    width: 60px
+}
 
 

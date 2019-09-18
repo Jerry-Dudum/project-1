@@ -4,58 +4,69 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/rest.css">
+    <link rel="stylesheet" href="css/reset.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
     <title>Get in my Belly!</title>
+
 </head>
 
 <body>
     <div class="main">
         <!-- <div class="row"> -->
         <nav class="navbar sticky-top">
-            <h1 class="animated bounceInRight delay-1s"> <img src="assets/getinMyBelly.png" width="10px" height="10px" alt="icon" class="animated bounceInRight delay-1s logo">
-            Get in my Belly</h1>
+            <h1 class="animated bounceInRight delay-1s"> <img src="assets/getinMyBelly.png" width="10px" height="10px"
+                    alt="icon" class="animated bounceInRight delay-1s logo">
+                Get in my Belly</h1>
         </nav>
         <!-- <i class="large material-icons">local_cafe</i> -->
         <div class="body-container">
+
             <div class="row">
-                <div class="container text-center">
+                <div class="container text-center col-sm-12">
                     <p class="text-center">
                         Don't know what to eat?
                         Don't worry we'll decide for you!
                     </p>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-sm-12 text-center nopadding">
                     <button id="random" type="button" class="btn btn-danger btn-lg">Random</button>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-sm-12 text-center nopadding">
                     <button id="vegetarian" type="button" class="btn btn-success btn-lg">Vegetarian</button>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-sm-12 text-center nopadding">
-
                     <button id="modal" type="button" class="btn btn-primary" data-toggle="modal"
                         data-target="#exampleModal" data-whatever="@mdo">Custom</button>
                 </div>
+
             </div>
         </div>
+
+
         <div class="row">
             <div class="col-sm-12">
-                <!-- MAp Code here  -->
                 <div id="map"></div>
             </div>
         </div>
+
         <!-- Yelp api feeding into id  -->
         <div id="yelp-info"></div>
 
@@ -72,58 +83,57 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
+
                                 <label for="food" class="col-form-label">Food: </label>
                                 <input type="text" placeholder="ex.pizza" class="form-control" id="food-input">
-                            </div>
-                            <div class="form-group">
+
                                 <label for="price" class="col-form-label">Price:</label>
-                                <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
-                                        <option selected value="1">$</option>
-                                        <option value="2">$$</option>
-                                        <option value="3">$$$</option>
-                                        <option value="4">$$$$</option>
-                                      </select>
-                            </div>
-                            <div class="form-group">
+                                <select id="price-input" class="custom-select" aria-labelledby="dropdownMenuButton">
+                                    <option selected>Select a price</option>
+                                    <option value="1">$</option>
+                                    <option value="2">$$</option>
+                                    <option value="3">$$$</option>
+                                    <option value="4">$$$$</option>
+                                </select>
+
                                 <label for="numberOfRestaurants" class="col-form-label">Number of Restaurants:</label>
-                                <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
-                                        <option selected value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                      </select>
-                      
+                                <select id="limit-input" class="custom-select" aria-labelledby="dropdownMenuButton">
+                                    <option selected>Select a # of restaurants</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
 
+                    <div class="modal-footer">
                         <button type="button" id="submit-button" class="btn btn-success"
                             data-dismiss="modal">Submit</button>
                     </div>
+                
                 </div>
             </div>
         </div>
 
     </div>
 
-    </div>
-
-
-    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZFQUOiL5v0hkvdhCiNmuZiXNG045GcoM&callback=initMap"
+        async defer></script>
 </body>
 
 </html>

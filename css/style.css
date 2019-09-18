@@ -82,6 +82,7 @@ p {
 
 .modal-content {
     width: 200px;
+    margin: auto;
 }
 
 img {

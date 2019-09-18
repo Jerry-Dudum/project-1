@@ -1,4 +1,3 @@
-//food array to randomly select a type of food to eat
 var foodArray = ["chinese", "mexican", "burger", "sandwich", "pizza", "thai", "sushi", "korean", "chicken wings", "ramen", "hawaiian", "mediterranean", "arabic", "indian", "soul food"];
 
 $(document).on("click", "#random", yelpInfo);
@@ -17,7 +16,7 @@ function yelpInfo() {
     var yelpAPIkey = "szilVGiGWvqemg5iRsO467vT0806iGe5kazKMT1iONvN4XqA4fzTGbKMtpuIudFVSiRB7ikZ_ZWvI0Xr0ImMpuCdS_sMsejPHdti0ml3Wj_4TiirKzYxKZ7rWeB7XXYx"
 
     $("#yelp-info").empty();
-    // need to update lat and long with current user location later
+
     var queryURL = "https://api.yelp.com/v3/businesses/search?term=" + randomFood + "&limit=4&latitude=" + currentLocation.lat + "&longitude=" + currentLocation.lng
 
     $.ajax({
@@ -69,16 +68,6 @@ function yelpInfo() {
     });
 };
 
-// -------------------------------ANDREW'S WORK AREA------------------------------------------------------//
-
-
-
-// -----------------------------------------------------------------------------------------------------//
-
-
-
-// -----------------------------------JERRY'S WORK AREA----------------------------------------------------//
-
 $(document).on("click", "#vegetarian", yelpInfo2);
 
 function yelpInfo2() {
@@ -92,7 +81,7 @@ function yelpInfo2() {
     var yelpAPIkey = "szilVGiGWvqemg5iRsO467vT0806iGe5kazKMT1iONvN4XqA4fzTGbKMtpuIudFVSiRB7ikZ_ZWvI0Xr0ImMpuCdS_sMsejPHdti0ml3Wj_4TiirKzYxKZ7rWeB7XXYx"
 
     $("#yelp-info").empty();
-    // need to update lat and long with current user location later
+    
     var queryURL = "https://api.yelp.com/v3/businesses/search?term=vegetarian&limit=4&latitude=" + currentLocation.lat + "&longitude=" + currentLocation.lng
 
     $.ajax({
@@ -157,8 +146,6 @@ $("#submit-button").on("click", function (event) {
     $("#limit-input").val("");
 
 
-    // $('#modal').modal('hide');
-
     yelpInfo3();
 
 });
@@ -176,7 +163,7 @@ function yelpInfo3() {
     var yelpAPIkey = "szilVGiGWvqemg5iRsO467vT0806iGe5kazKMT1iONvN4XqA4fzTGbKMtpuIudFVSiRB7ikZ_ZWvI0Xr0ImMpuCdS_sMsejPHdti0ml3Wj_4TiirKzYxKZ7rWeB7XXYx"
 
     $("#yelp-info").empty();
-    // need to update lat and long with current user location later
+    
     var queryURL = "https://api.yelp.com/v3/businesses/search?term=" + foodName + "&limit=" + foodLimit + "&latitude=" + currentLocation.lat + "&longitude=" + currentLocation.lng + "&price=" + foodPrice + "&sort_rating"
 
     $.ajax({
@@ -190,6 +177,7 @@ function yelpInfo3() {
         console.log(response);
 
         var results = response.businesses;
+        
 
         console.log(results);
 
@@ -259,9 +247,3 @@ function initMap() {
         })
     }
 }
-
-
-
-
-
-//-----------------------------------------------------------------------------------------------------------//

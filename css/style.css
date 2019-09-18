@@ -45,7 +45,8 @@ p {
 }
 
 #random:hover {
-    background-color: yellow;
+    background-color: #ffc300;
+    color: black;
 }
 
 #vegetarian {
@@ -61,6 +62,7 @@ p {
 
 #vegetarian:hover {
     background-color: lightgreen;
+    color: black;
 }
 
 #modal {
@@ -76,6 +78,7 @@ p {
 
 #modal:hover {
     background-color: lightgreen;
+    color: black;
 }
 
 .modal-content {

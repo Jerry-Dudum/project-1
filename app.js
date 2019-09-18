@@ -57,14 +57,6 @@ function yelpInfo() {
 // -------------------------------ANDREW'S WORK AREA------------------------------------------------------//
 
 
-<iframe
-width="600"
-height="450"
-frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDq4JjKBmkmBBn3cBL4KzBIKJ4yfFKf85I&q=37.791512,-122.393649&amp;zoom=18&amp;maptype=roadmap" allowfullscreen>
-</iframe> 
-
-
 
 // -----------------------------------------------------------------------------------------------------//
 
@@ -128,11 +120,11 @@ $("#submit-button").on("click", function (event) {
 
     foodName = $("#food-input").val().trim();
     foodPrice = $("#price-input").val().trim();
-    foodRating = $("#rating-input").val().trim();
+    foodLimit = $("#limit-input").val().trim();
 
     $("#food-input").val("");
     $("#price-input").val("");
-    $("#rating-input").val("");
+    $("#limit-input").val("");
 
 
     // $('#modal').modal('hide');
@@ -155,7 +147,7 @@ function yelpInfo3() {
 
     $("#yelp-info").empty();
     // need to update lat and long with current user location later
-    var queryURL = "https://api.yelp.com/v3/businesses/search?term=" + foodName + "&limit=4&latitude=37.791512&longitude=-122.393649&price=" + foodPrice + "&sort_rating" + foodRating
+    var queryURL = "https://api.yelp.com/v3/businesses/search?term=" + foodName + "&limit=" + foodLimit + "&latitude=37.791512&longitude=-122.393649&price=" + foodPrice + "&sort_rating"
 
     $.ajax({
         url: queryURL,

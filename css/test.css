@@ -12,3 +12,8 @@ img {
 #restaurant {
     padding: 10px 10px;
 }
+
+#map {
+    height: 500px;
+    width: 100%
+}

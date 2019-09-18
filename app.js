@@ -18,7 +18,7 @@ function yelpInfo() {
 
     $("#yelp-info").empty();
     // need to update lat and long with current user location later
-    var queryURL = "https://api.yelp.com/v3/businesses/search?term=" + randomFood + "&limit=4&latitude=37.791512&longitude=-122.393649"
+    var queryURL = "https://api.yelp.com/v3/businesses/search?term=" + randomFood + "&limit=4&latitude=" + currentLocation.lat + "&longitude=" + currentLocation.lng
 
     $.ajax({
         url: queryURL,
@@ -50,6 +50,7 @@ function yelpInfo() {
             newRest.append(restName, restRating, restPrice, restAddress);
 
             $("#yelp-info").append(newRest);
+            console.log(currentLocation.lat, currentLocation.lng);
         }
     });
 };
@@ -78,7 +79,7 @@ function yelpInfo2() {
 
     $("#yelp-info").empty();
     // need to update lat and long with current user location later
-    var queryURL = "https://api.yelp.com/v3/businesses/search?term=vegetarian&limit=4&latitude=37.791512&longitude=-122.393649"
+    var queryURL = "https://api.yelp.com/v3/businesses/search?term=vegetarian&limit=4&latitude=" + currentLocation.lat + "&longitude=" + currentLocation.lng
 
     $.ajax({
         url: queryURL,
@@ -147,7 +148,7 @@ function yelpInfo3() {
 
     $("#yelp-info").empty();
     // need to update lat and long with current user location later
-    var queryURL = "https://api.yelp.com/v3/businesses/search?term=" + foodName + "&limit=" + foodLimit + "&latitude=37.791512&longitude=-122.393649&price=" + foodPrice + "&sort_rating"
+    var queryURL = "https://api.yelp.com/v3/businesses/search?term=" + foodName + "&limit=" + foodLimit + "&latitude=" + currentLocation.lat + "&longitude=" + currentLocation.lng + "&price=" + foodPrice + "&sort_rating"
 
     $.ajax({
         url: queryURL,
@@ -182,5 +183,37 @@ function yelpInfo3() {
         }
     });
 };
+
+var map;
+var currentLocation = {};
+
+function initMap() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            currentLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            }
+
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: currentLocation.lat,
+                    lng: currentLocation.lng
+                },
+                zoom: 15
+            });
+
+            var marker = new google.maps.Marker({
+                position: currentLocation,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+            })
+            marker.setMap(map);
+            console.log(currentLocation);
+        })
+    }
+}
+
 
 //-----------------------------------------------------------------------------------------------------------//

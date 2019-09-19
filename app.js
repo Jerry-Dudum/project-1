@@ -133,24 +133,43 @@ function yelpInfo2() {
     });
 };
 
+var foodName;
+var foodPrice;
+var foodLimit;
+
 $("#submit-button").on("click", function (event) {
     
     event.preventDefault();
 
     foodName = $("#food-input").val().trim();
-    foodPrice = $("#price-input").val().trim();
-    foodLimit = $("#limit-input").val().trim();
+    foodPrice = $("#price-input").val();
+    foodLimit = $("#limit-input").val();
 
+    if(foodName == "" || foodName == null){
+        $("#blank").text(": Please type in a food");
+    }
+    if(foodPrice == "" || foodPrice == null){
+        $("#blank2").text(": Please select a number");
+    }
+    if(foodLimit == "" || foodLimit == null){
+        $("#blank3").text(": Please select a number");
+    }
+    else {
+    yelpInfo3();
+    
     $("#food-input").val("");
     $("#price-input").val("");
     $("#limit-input").val("");
+    $("#blank").text("");
+    $("#blank2").text("");
+    $("#blank3").text("");
 
-
-    yelpInfo3();
-
+    }
 });
 
-
+console.log(foodName);
+console.log(foodPrice);
+console.log(foodLimit);
 
 function yelpInfo3() {
 

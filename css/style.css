@@ -1,13 +1,21 @@
+body{ 
+    width: 100%;
+}
 .navbar {
     padding: 0 !important;
-    background-color: #ffc300;
+    background-color: red;
+
 }
 
 .body-container {
-    background-image: url('../assets/Background.jpeg');
-    background-repeat: repeat;
+    /* background-image: url('../assets/Background3.png'); */
+    /* background-repeat: no-repeat; */
     height: 500px;
-    width: 100%
+    width: 100%;
+    /* background-position: center;
+    background-size: contain; */
+    /* object-fit: contain; */
+    background: #ffc300;
 } 
 
 h1 {
@@ -16,7 +24,10 @@ h1 {
     font-size: 360%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
+    color: white;
 }
+
+
 
 p {
     margin-top: 5px;
@@ -31,6 +42,7 @@ p {
 
 #random {
     background-color: red;
+    color: white;
     margin-top: 5px;
     padding: 18px 18px;
     font-size: 52px; 
@@ -41,12 +53,13 @@ p {
 }
 
 #random:hover {
-    background-color: #ffc300;
+    background-color: green;
     color: black;
 }
 
 #vegetarian {
-    background-color: darkgreen;
+    background-color: red;
+    color: white;
     margin-top: 10px;
     padding: 18px 18px;
     font-size: 32px; 
@@ -57,12 +70,13 @@ p {
 }
 
 #vegetarian:hover {
-    background-color: lightgreen;
+    background-color: green;
     color: black;
 }
 
 #modal {
-    background-color: darkgreen;
+    background-color: red;
+    color: white;
     margin-top: 10px;
     padding: 18px 18px;
     font-size: 32px; 
@@ -73,7 +87,7 @@ p {
 }
 
 #modal:hover {
-    background-color: lightgreen;
+    background-color:green;
     color: black;
 }
 
@@ -96,6 +110,7 @@ img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: #ffc300;
  }
  
  #restaurant {
@@ -113,7 +128,7 @@ img {
 .logo {
     height: 60px;
     width: 60px;
-    padding-left: 10px
-}
+    padding-left: 10px;
 
+}
 

@@ -1,7 +1,3 @@
-.material-icons {
-    padding-right: 10%;
-}
-
 .navbar {
     padding: 0 !important;
     background-color: #ffc300;
@@ -9,21 +5,21 @@
 
 .body-container {
     background-image: url('../assets/Background.jpeg');
-    width: 100%;
-    height: 650px;
-    background-repeat: repeat
+    background-repeat: repeat;
+    height: 500px;
+    width: 100%
 } 
 
 h1 {
     width: 100%;
-    margin-left: 3%;
+    margin-left: 5px;
     font-size: 360%;
     font-family: 'righteous', cursive;
     font-weight: bold;
 }
 
 p {
-    margin-top: 2%;
+    margin-top: 5px;
     font-size: 48px;
     color: red;
     text-shadow:
@@ -35,7 +31,7 @@ p {
 
 #random {
     background-color: red;
-    margin-top: 3%;
+    margin-top: 5px;
     padding: 18px 18px;
     font-size: 52px; 
     line-height: normal;
@@ -51,7 +47,7 @@ p {
 
 #vegetarian {
     background-color: darkgreen;
-    margin-top: 3%;
+    margin-top: 10px;
     padding: 18px 18px;
     font-size: 32px; 
     line-height: normal;
@@ -67,7 +63,7 @@ p {
 
 #modal {
     background-color: darkgreen;
-    margin-top: 3%;
+    margin-top: 10px;
     padding: 18px 18px;
     font-size: 32px; 
     line-height: normal;
@@ -91,6 +87,11 @@ img {
     height: 200px;
  }
  
+ #map {
+    height: 500px;
+    width: 100%
+}
+
  #yelp-info {
     display: flex;
     justify-content: center;
@@ -111,7 +112,8 @@ img {
 
 .logo {
     height: 60px;
-    width: 60px
+    width: 60px;
+    padding-left: 10px
 }
 
 

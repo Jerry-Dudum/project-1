@@ -244,6 +244,7 @@ function initMap() {
             })
             marker.setMap(map);
             console.log(currentLocation);
+            console.log(map);
         })
     }
 }

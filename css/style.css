@@ -8,13 +8,8 @@ body{
 }
 
 .body-container {
-    /* background-image: url('../assets/Background3.png'); */
-    /* background-repeat: no-repeat; */
     height: 500px;
     width: 100%;
-    /* background-position: center;
-    background-size: contain; */
-    /* object-fit: contain; */
     background: #ffc300;
 } 
 
@@ -136,5 +131,6 @@ img {
     color: red;
 }
 
-html, body { overflow-x: hidden; 
+body { 
+    overflow-x: hidden; 
 }

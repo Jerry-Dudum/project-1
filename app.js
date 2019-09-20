@@ -167,6 +167,14 @@ $("#submit-button").on("click", function (event) {
     }
 });
 
+$(".main-btn").hover(function(){
+    $(this).addClass("animated tada");
+});
+
+$(".main-btn").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
+    $(this).removeClass("animated tada");
+});
+
 console.log(foodName);
 console.log(foodPrice);
 console.log(foodLimit);

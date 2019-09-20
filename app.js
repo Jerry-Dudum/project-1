@@ -146,13 +146,13 @@ $("#submit-button").on("click", function (event) {
     foodLimit = $("#limit-input").val();
 
     if(foodName == "" || foodName == null){
-        $("#blank").text(": Please type in a food");
+        $("#blank").text(" Please type in a food");
     }
     if(foodPrice == "" || foodPrice == null){
-        $("#blank2").text(": Please select a number");
+        $("#blank2").text(" Please select a number");
     }
     if(foodLimit == "" || foodLimit == null){
-        $("#blank3").text(": Please select a number");
+        $("#blank3").text(" Please select a number");
     }
     else {
     yelpInfo3();

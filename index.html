@@ -27,7 +27,7 @@
                     alt="icon" class="animated bounceInRight delay-1s logo">
                 Get in my Belly</h1>
         </nav>
-        <!-- <i class="large material-icons">local_cafe</i> -->
+
         <div class="body-container">
 
             <div class="row">
@@ -39,90 +39,102 @@
                 </div>
             </div>
 
-<!-- <div class="manipulate-buttons text-center nopadding" style="margin: 0px auto; background-color: red; height: 285px; width: 240px;"> -->
 
-<div class="manipulate-buttons text-center nopadding" style="margin: 0px auto;">
-            <div class="row" >
-                <div class="col-sm-12 ">
-                    <button id="random" type="button" class="btn btn-danger btn-lg main-btn">Random</button>
+            <div class="manipulate-buttons text-center nopadding" style="margin: 0px auto;">
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <button id="random" type="button" class="btn btn-danger btn-lg main-btn">Random</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <button id="vegetarian" type="button"
+                            class="btn btn-success btn-lg main-btn">Vegetarian</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <button id="modal" type="button" class="btn btn-primary main-btn" data-toggle="modal"
+                            data-target="#exampleModal" data-whatever="@mdo">Custom</button>
+                    </div>
+
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-sm-12 ">
-                    <button id="vegetarian" type="button" class="btn btn-success btn-lg main-btn">Vegetarian</button>
+                <div class="container text-center col-sm-12">
+                    <p class="text-center">
+                        Scroll down to see results.
+                    </p>
                 </div>
             </div>
+
 
             <div class="row">
-                <div class="col-sm-12 ">
-                    <button id="modal" type="button" class="btn btn-primary main-btn" data-toggle="modal"
-                        data-target="#exampleModal" data-whatever="@mdo">Custom</button>
+                <div class="col-sm-12">
+                    <div id="map" style="border:10px solid red"></div>
                 </div>
-
             </div>
-</div>
-        </div>
 
+            <!-- Yelp api feeding into id  -->
+            <div id="yelp-info"></div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="map" style="border:10px solid red"></div>
-            </div>
-        </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Enter Food Type Price and Rating</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
 
-        <!-- Yelp api feeding into id  -->
-        <div id="yelp-info"></div>
+                                    <label for="food-input" class="col-form-label">Food<span class="input-blank"
+                                            id="blank"></span></label>
+                                    <input type="text" placeholder="Pizza" class="form-control" id="food-input">
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Enter Food Type Price and Rating</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                                    <label for="price-input" class="col-form-label">Price<span class="input-blank"
+                                            id="blank2"></span></label>
+                                    <select id="price-input" placeholder="Select a price" class="custom-select"
+                                        aria-labelledby="dropdownMenuButton">
+                                        <option selected></option>
+                                        <option value="1">$</option>
+                                        <option value="2">$$</option>
+                                        <option value="3">$$$</option>
+                                        <option value="4">$$$$</option>
+                                    </select>
+
+                                    <label for="numberOfRestaurants" class="col-form-label">Number of Restaurants<span
+                                            class="input-blank" id="blank3"></span></label>
+                                    <select id="limit-input" placeholder="# of Restaurants" class="custom-select"
+                                        aria-labelledby="dropdownMenuButton">
+                                        <option selected></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" id="submit-button" class="btn btn-success">Submit</button>
+                        </div>
+
                     </div>
-                    <div class="modal-body">
-                        <form> 
-                            <div class="form-group">
-
-                                <label for="food-input" class="col-form-label">Food<span class="input-blank" id="blank"></span></label>
-                                <input type="text" placeholder="Pizza" class="form-control" id="food-input">
-
-                                <label for="price-input" class="col-form-label">Price<span class="input-blank" id="blank2"></span></label>
-                                <select id="price-input" placeholder="Select a price" class="custom-select" aria-labelledby="dropdownMenuButton">
-                                    <option selected></option>
-                                    <option value="1">$</option>
-                                    <option value="2">$$</option>
-                                    <option value="3">$$$</option>
-                                    <option value="4">$$$$</option>
-                                </select>
-
-                                <label for="numberOfRestaurants" class="col-form-label">Number of Restaurants<span class="input-blank" id="blank3"></span></label>
-                                <select id="limit-input" placeholder="# of Restaurants" class="custom-select" aria-labelledby="dropdownMenuButton">
-                                    <option selected></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" id="submit-button" class="btn btn-success">Submit</button>
-                    </div>
-                
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- Optional JavaScript -->
